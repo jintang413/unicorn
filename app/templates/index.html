@@ -1,13 +1,9 @@
-<!doctype html>
-<html>
-    <head>
-        <title>{{ title }} - Item Status</title>
-    </head>
-    <body>
-        <h1>Hello, {{ user.username }}!</h1>
-        <h2>Wishlist:</h2>
-        {% for item in items %}
-        <div><p>{{ item.product.name }} available: <b>{{ item.status }}</b></p></div>
-        {% endfor %}
-    </body>
-</html
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hello, {{ user.username }}!</h1>
+    <h2>Wishlist:</h2>
+    {% for item in items %}
+    <div><p>{{ item.product.name }} available: <b>{{ item.status }}</b></p></div>
+    {% endfor %}
+{% endblock %}

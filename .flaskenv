@@ -1,1 +1,2 @@
 FLASK_APP=unicorn.py
+FLASK_ENV=development

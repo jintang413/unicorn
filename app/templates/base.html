@@ -1,11 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>{{ title }} - Item Status</title>
-    </head>
-    <body>
-        <div>Links: <a href="/index">Home</a></div>
-        <hr>
-        {% block content %}{% endblock %}
-    </body>
+  <head>
+    <title>{{ title }} - Item Status</title>
+  </head>
+  <body>
+    <div>
+      Unicorn:
+      <a href={{ url_for('index') }}>Home</a>
+      <a href={{ url_for('login') }}>Login</a>
+    </div>
+    <hr />
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
 </html>

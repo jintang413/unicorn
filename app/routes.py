@@ -11,7 +11,7 @@ def index():
         {"product": {"name": "SPEEDY BANDOULIÈRE 20"}, "status": True},
         {"product": {"name": "PRECIOUS TIGER REYKJAVIK SCARF"}, "status": False},
     ]
-    return render_template("index.html", title="Louis Vuitton", user=user, items=items)
+    return render_template("index.html", title="Summer & Jin's Wedding", user=user, items=items)
 
 
 @app.route("/login", methods=["GET", "POST"])

@@ -11,7 +11,6 @@ from werkzeug.urls import url_parse
 @app.route("/index")
 @login_required
 def index():
-    user = {"username": "Summer"}
     items = [
         {"product": {"name": "SPEEDY BANDOULIÈRE 20"}, "status": True},
         {"product": {"name": "PRECIOUS TIGER REYKJAVIK SCARF"}, "status": False},
